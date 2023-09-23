@@ -14,12 +14,19 @@ You could find how to compile this plugin at http://qtciphersqliteplugin.galaxyw
 Please read [Wiki](https://github.com/devbean/QtCipherSqlitePlugin/wiki) for more details.
 
 使用插件
+
 加密数据库
+
 QSqlDatabase dbconn = QSqlDatabase::addDatabase("SQLITECIPHER");
+
 dbconn.setDatabaseName("test.db");
+
 dbconn.setPassword("test");
+
 //将原本没有加密的数据库文件进行加密，此代码只需执行一次
+
 dbconn.setConnectOptions("QSQLITE_CREATE_KEY");
+
 dbconn.open()
 
 删除数据库密码
